@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     get "/product_1" => "products#product_1"
     get "/product_2" => 'products#product_2'
     get "/product_3" => 'products#product_3'
+    get "/segment_url/:product_preferred" =>'products#product_prefer'
   end
 
 end
