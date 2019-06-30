@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     get "/pillow" => 'products#product_prefer'
     get 'products' => 'products#index'
     get '/products/:id' => 'products#show'
+    post '/products' => 'products#create'
+    patch '/products/:id' => 'products#update'
   end
 
 end
