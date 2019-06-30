@@ -14,6 +14,10 @@ Rails.application.routes.draw do
     get "/product_3" => 'products#product_3'
     get "/segment_url/:product_preferred" =>'products#product_prefer'
     get "/pillow" => 'products#product_prefer'
+    get 'products' => 'products#index'
+    get '/products/:id' => 'products#show'
   end
 
 end
+
+
