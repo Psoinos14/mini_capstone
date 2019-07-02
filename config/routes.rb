@@ -8,12 +8,6 @@ Rails.application.routes.draw do
   # end
 
   namespace :api do
-    get "/all_products" =>  "products#products_all"
-    get "/product_1" => "products#product_1"
-    get "/product_2" => 'products#product_2'
-    get "/product_3" => 'products#product_3'
-    get "/segment_url/:product_preferred" =>'products#product_prefer'
-    get "/pillow" => 'products#product_prefer'
     get 'products' => 'products#index'
     get '/products/:id' => 'products#show'
     post '/products' => 'products#create'
