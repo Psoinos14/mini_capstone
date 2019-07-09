@@ -5,6 +5,7 @@
   image_url: product.image_url,
   description: product.description,
   discounted?: product.is_discounted?,
+  supplier: product.supplier.name,
   tax: product.tax,
   total: product.total
 }

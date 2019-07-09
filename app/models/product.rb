@@ -7,7 +7,9 @@ class Product < ApplicationRecord
   validates :description, length: { in: 10..500 }
   validates :image_url, length: { maximum: 23000 }
 
-
+  def supplier
+    Supplier.find_by(id: supplier_id)
+  end
 
   def is_discounted?
     if price < 10
