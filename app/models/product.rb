@@ -1,5 +1,10 @@
 class Product < ApplicationRecord
 
+  belongs_to :supplier
+  has_many :images
+  has_many :orders
+
+
   validates :name, presence: true
   validates :name, uniqueness: true
   validates :price, presence: true
@@ -7,9 +12,6 @@ class Product < ApplicationRecord
   validates :description, length: { in: 10..500 }
   validates :image_url, length: { maximum: 23000 }
 
-  def supplier
-    Supplier.find_by(id: supplier_id)
-  end
 
   def is_discounted?
     if price < 10
@@ -26,6 +28,5 @@ class Product < ApplicationRecord
   def total
     "#{price.to_i + tax.to_i}"
   end
-
 
 end
