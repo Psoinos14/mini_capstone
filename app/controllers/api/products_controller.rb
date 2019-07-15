@@ -12,6 +12,11 @@ class Api::ProductsController < ApplicationController
     if params[:discount]
       @products = Product.where("price < ?", "#{params[:discount]}")
     end
+
+    if params[:category]
+      category = Category.find_by(name: params[:category])
+      @products = category.products
+    end
     render 'index.json.jb'
   end
 

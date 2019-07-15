@@ -8,5 +8,6 @@
   supplier: product.supplier.name,
   tax: product.tax,
   total: product.total,
-  user: current_user
+  user: current_user,
+  categories: product.categories,
 }
