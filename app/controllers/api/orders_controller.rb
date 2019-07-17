@@ -22,6 +22,11 @@ class Api::OrdersController < ApplicationController
       product_id: params[:product_id],
     )
     @order.save
+    
+
+    @carted_products = CartedProduct.where(user_id: current_user.id, status: "carted")
+    
+
     render 'show.json.jb'
   end
 

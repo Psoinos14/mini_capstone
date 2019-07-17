@@ -1,0 +1,13 @@
+{
+  order_id: @carted_product.order_id,
+  product_id: @carted_product.product_id,
+  status: "carted",
+  user_id: current_user.id,
+  quantity: @carted_product.quantity
+
+
+  # quantity: params[:quantity],
+  #     product_id: params[:product_id],
+  #     status: "carted",
+  #     user_id: current_user.id
+}
