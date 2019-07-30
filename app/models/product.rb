@@ -34,4 +34,13 @@ class Product < ApplicationRecord
     "#{price.to_i + tax.to_i}"
   end
 
+  def image_url
+    if images.length > 0
+      return images[0].url
+    else
+      return 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTLn8Q3_pJ0v0JivyKxvomI7IO-dnQZuJq3d7afXpAXa-ZTgYNaTPLdbmziHuhacVVIsrf-sj2NCL3LOB5r8RMVN0a9_5P0RAxDkX9P2LxZrLilc6WcgWhgew&usqp=CAc'
+    end
+  end
+
+
 end

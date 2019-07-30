@@ -1,0 +1,13 @@
+hemlo am index
+
+<div>
+  <% @products.each do |product| %>
+    <p>id: <%= product.id %> </p>
+    <p>name: <%= product.name %> </p>
+    <p>price: <%= product.price %> </p>
+    <p>url: <%= product.images %> </p>
+    <p>description: <%= product.description %> </p>
+    <p>discounted?: <%= product.is_discounted? %> </p>
+    <hr>
+  <% end %>
+</div>

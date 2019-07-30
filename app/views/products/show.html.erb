@@ -1,0 +1,20 @@
+Hemlo am the show action
+
+<a href="/products">Go back to the home page</a>
+<a href="/products/:id/edit">Go to the edit page</a>
+<div>
+    <p>id: <%= @product.id %> </p>
+    <p>name: <%= @product.name %> </p>
+    <p>price: <%= @product.price %> </p>
+    <p>url: <%= @product.images %> </p>
+    <p>description: <%= @product.description %> </p>
+    <p>discounted?: <%= @product.is_discounted? %> </p>
+    <p>supplier: <%= @product.supplier.name %> </p>
+    <p>tax: <%= @product.tax %> </p>
+    <p>total: <%= @product.total %> </p>
+    <p>current user: <%= current_user %> </p>
+    <p>categories: <%= @product.categories %> </p>
+    <hr>
+
+
+    <a href="/products/<%= @product.id %>" data-method="delete" rel="nofollow">Delete the product</a>
