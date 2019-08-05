@@ -31,6 +31,7 @@ class Api::ProductsController < ApplicationController
       name: params[:name],
       price: params[:price],
       description: params[:description],
+      image_url: params[:image_url],
       supplier_id: params[:supplier_id]
     )
     if @product.save
